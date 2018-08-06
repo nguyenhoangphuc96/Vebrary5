@@ -8,10 +8,20 @@
         <item name="colorAccent">@color/colorBlueLight</item>
     </style>
     <style name="TextTitleLogin" parent="@style/TextAppearance.Design.Counter">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/colorBlack</item>
         <item name="android:textStyle">bold</item>
-
+    </style>
+    <style name="TextEditTextFeedback" parent="@style/TextAppearance.Design.Counter">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TextLogin" parent="@style/TextAppearance.Design.Counter">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorBackgroundToolbarBlue</item>
+    </style>
+    <style name="TextButtonBluelight" parent="@style/TextAppearance.Design.Counter">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
     </style>
 
 </resources>

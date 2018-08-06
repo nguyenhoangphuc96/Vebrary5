@@ -3,4 +3,7 @@
     <dimen name="margin_login_top">3dp</dimen>
     <dimen name="margin_login_bottom">10dp</dimen>
     <dimen name="margin_login_horizional">10dp</dimen>
+    <dimen name="edittext_padding_left">15dp</dimen>
+    <dimen name="edittext_margin_vertical">7dp</dimen>
+    <dimen name="button_bluelight_padding_vertical">15dp</dimen>
 </resources>
