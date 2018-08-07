@@ -91,12 +91,22 @@
                     android:textAppearance="@style/TextEditTextFeedback"
                     android:textColor="@color/colorBlack"
                     android:hint="Mật khẩu"/>
-                <ImageButton
-                    android:layout_alignEnd="@id/edtPassword"
-                    android:background="null"
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_hint_pass"/>
+                    android:layout_marginHorizontal="@dimen/edittext_padding_left"
+                    android:layout_marginVertical="@dimen/edittext_margin_vertical">
+                    <ImageButton
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="@dimen/margin_login_top"
+                        android:layout_alignParentEnd="true"
+                        android:padding="3dp"
+                        android:background="@drawable/shape_transparent_black_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_hint_pass"/>
+                </RelativeLayout>
+
             </RelativeLayout>
         </LinearLayout>
         <LinearLayout
