@@ -1,5 +1,6 @@
 package com.lacviet.vebrary5;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 
 import com.lacviet.vebrary5.Adapter.MainscreenRecyclerViewAdapter;
 import com.lacviet.vebrary5.Model.MainScreenWithImageModel;
+import com.lacviet.vebrary5.Search.SearchOpacActivity;
 
 import java.util.ArrayList;
 
@@ -63,12 +65,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_search:
-                //startNormalSearchActivity();
+                startOpacSearchActivity();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    private void startOpacSearchActivity() {
+        Intent intent = new Intent(MainActivity.this, SearchOpacActivity.class);
+        startActivity(intent);
+    }
+
     private void addEvent() {
         txtTitleCategory.setOnClickListener(new View.OnClickListener() {
             @Override

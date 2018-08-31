@@ -132,8 +132,8 @@
                 android:layout_weight="32"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingVertical="@dimen/button_bluelight_padding_vertical"
-                android:paddingHorizontal="@dimen/button_bluelight_padding_vertical">
+                android:paddingVertical="@dimen/login_button_bluelight_padding"
+                android:paddingHorizontal="@dimen/login_button_bluelight_padding">
                 <TextView
                     android:id="@+id/tvLogin"
                     android:layout_width="match_parent"

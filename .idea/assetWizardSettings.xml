@@ -19,8 +19,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="D:\NHPHUC\VEBRARY\2018\LacVietHPSMuseumManagementApp\app\src\main\res\drawable-xxhdpi\ic_search_white.png" />
-                                      <entry key="outputName" value="ic_search_white" />
+                                      <entry key="imageAsset" value="D:\NHPHUC\VEBRARY\2018\LacVietHPSMuseumManagementApp\app\src\main\res\drawable-xxhdpi\ic_back_arrow.png" />
+                                      <entry key="outputName" value="ic_back_arrow" />
                                       <entry key="theme" value="CUSTOM" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>
