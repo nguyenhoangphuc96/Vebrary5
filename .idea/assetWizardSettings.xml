@@ -19,10 +19,10 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\nhphuc\Downloads\icons8-hide-filled-100.png" />
-                                      <entry key="outputName" value="ic_hint_pass" />
+                                      <entry key="imageAsset" value="D:\NHPHUC\VEBRARY\2018\LacVietHPSMuseumManagementApp\app\src\main\res\drawable-xxhdpi\ic_search_white.png" />
+                                      <entry key="outputName" value="ic_search_white" />
                                       <entry key="theme" value="CUSTOM" />
-                                      <entry key="themeColor" value="01dad7" />
+                                      <entry key="themeColor" value="ffffff" />
                                     </map>
                                   </option>
                                 </PersistentState>

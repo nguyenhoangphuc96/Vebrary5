@@ -135,7 +135,7 @@
                 android:paddingVertical="@dimen/button_bluelight_padding_vertical"
                 android:paddingHorizontal="@dimen/button_bluelight_padding_vertical">
                 <TextView
-                    android:id="@+id/tvSend"
+                    android:id="@+id/tvLogin"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/shape_border_button_bluelight"

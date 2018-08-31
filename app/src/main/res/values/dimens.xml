@@ -6,4 +6,7 @@
     <dimen name="edittext_padding_left">15dp</dimen>
     <dimen name="edittext_margin_vertical">7dp</dimen>
     <dimen name="button_bluelight_padding_vertical">15dp</dimen>
+    <dimen name="padding_recyclerview">7dp</dimen>
+    <dimen name="paddingverhicle_border_button_bluelight">5dp</dimen>
+    <dimen name="cardview_corner_radius">10dp</dimen>
 </resources>
