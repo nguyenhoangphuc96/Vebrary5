@@ -49,4 +49,18 @@
         <item name="android:textSize">13sp</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
+    <style name="TextResult" parent="TextAppearance.Design.Counter">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/colorGrayBlack</item>
+    </style>
+    <style name="TextTitleItemResult" parent="TextAppearance.Design.Counter">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/colorGrayBlack</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAuthorItemResult" parent="TextAppearance.Design.Counter">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorGrayBlack</item>
+
+    </style>
 </resources>

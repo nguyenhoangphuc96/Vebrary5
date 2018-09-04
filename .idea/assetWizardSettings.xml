@@ -19,10 +19,10 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="D:\NHPHUC\VEBRARY\2018\LacVietHPSMuseumManagementApp\app\src\main\res\drawable-xxhdpi\ic_back_arrow.png" />
-                                      <entry key="outputName" value="ic_back_arrow" />
+                                      <entry key="imageAsset" value="C:\Users\nhphuc\Downloads\icons8-data-transfer-96 (1).png" />
+                                      <entry key="outputName" value="ic_transfer" />
                                       <entry key="theme" value="CUSTOM" />
-                                      <entry key="themeColor" value="ffffff" />
+                                      <entry key="themeColor" value="000000" />
                                     </map>
                                   </option>
                                 </PersistentState>

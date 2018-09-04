@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/rcv_item_padding"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    android:background="?android:attr/selectableItemBackground">
+    <LinearLayout
+        android:paddingEnd="@dimen/rcv_item_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/circleImvAvatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/img_avatar"
+            app:border_color="#FF000000" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="@dimen/rcv_item_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                style="@style/TextTitleItemResult"/>
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author"
+                style="@style/TextAuthorItemResult"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:padding="@dimen/rcv_item_padding"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center"
+                android:drawableStart="@drawable/ic_book_stack"
+                android:id="@+id/tvTotalCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"
+                style="@style/TextAuthorItemResult"
+                android:textColor="@color/colorGrayBlack"
+                android:layout_marginEnd="@dimen/item_result_icon_marginend"/>
+            <TextView
+                android:layout_toEndOf="@id/tvTotalCount"
+                android:gravity="center"
+                android:drawableStart="@drawable/ic_transfer"
+                android:id="@+id/tvCirculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="267"
+                style="@style/TextAuthorItemResult"
+                android:textColor="@color/colorGrayBlack"/>
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:paddingHorizontal="@dimen/circle_padding"
+                android:gravity="center"
+                android:layout_toStartOf="@id/tvAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:background="@drawable/shape_circle_orange"
+                    android:gravity="center"
+                    android:id="@+id/btnAvailableCount"
+                    android:layout_width="@dimen/height_circle"
+                    android:layout_height="@dimen/height_circle"
+                    android:text="3"
+                    style="@style/TextAuthorItemResult"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAvailable"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sẵn có"
+                style="@style/TextAuthorItemResult"
+                android:textColor="@color/colorGrayBlack"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
