@@ -23,13 +23,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lacviet.vebrary5.Adapter.MainscreenRecyclerViewAdapter;
+import com.lacviet.vebrary5.Detail.DetailActivity;
 import com.lacviet.vebrary5.Model.MainScreenWithImageModel;
 import com.lacviet.vebrary5.Search.SearchOpacActivity;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Toolbar toolbar;
+    public static Toolbar toolbar;
     RecyclerView recyclerView;
     NavigationView navigationView;
     DrawerLayout drawerLayout;
@@ -148,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onPostClick(long id) {
-                //startDetailActivity((int) id);
+                startDetailActivity((int) id);
 
             }
         });
@@ -175,6 +176,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         };
         recyclerView.addOnScrollListener(scrollListener);*/
     }
+
+    private void startDetailActivity(int id) {
+        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+
+        startActivity(intent);
+    }
+
     private void addControl() {
         toolbar = findViewById(R.id.toolbarMainscreen);
         recyclerView = findViewById(R.id.rcvMainScreen);

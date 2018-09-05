@@ -61,6 +61,22 @@
     <style name="TextAuthorItemResult" parent="TextAppearance.Design.Counter">
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/colorGrayBlack</item>
-
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="TextTabName" parent="@style/TextAppearance.Design.Counter">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorGrayforText</item>
+    </style>
+    <style name="TextTitleDetailBlue" parent="@style/TextAppearance.Design.Counter">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorBlueLight</item>
+    </style>
+    <style name="TextListInfoDetailGray" parent="@style/TextAppearance.Design.Counter">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorGrayforText</item>
+    </style>
+    <style name="TextListInfoDetailBlack" parent="@style/TextAppearance.Design.Counter">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
     </style>
 </resources>

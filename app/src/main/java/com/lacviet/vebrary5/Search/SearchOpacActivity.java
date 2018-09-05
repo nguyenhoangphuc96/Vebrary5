@@ -77,8 +77,6 @@ public class SearchOpacActivity extends AppCompatActivity {
                 recyclerView.setLayoutParams(marginLayoutParams);
             }
         });
-
-
     }
     private void initlistBook() {
         listBook = new ArrayList<>();

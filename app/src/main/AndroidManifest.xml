@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".Search.SearchOpacActivity"></activity>
+        <activity android:name=".Detail.DetailActivity"></activity>
     </application>
 
 </manifest>
