@@ -7,7 +7,7 @@
     <color name="colorBackgroundToolbarBlue">#1C96D4</color>
     <color name="colorBackgroundGray">#F2F2F2</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="colorRed">#DC0000</color>
+    <color name="colorRed">#ff0000</color>
     <color name="colorLittleRed">#fc3939</color>
     <color name="colorBlack">#000000</color>
     <color name="colorTextDecriptionGray">#9F9F9F</color>

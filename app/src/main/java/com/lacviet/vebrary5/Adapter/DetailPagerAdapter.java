@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.lacviet.vebrary5.Detail.TabDescriptionFragment;
+import com.lacviet.vebrary5.Detail.TabMarcFragment;
 
 public class DetailPagerAdapter extends FragmentStatePagerAdapter {
     private Context context;
@@ -22,7 +23,7 @@ public class DetailPagerAdapter extends FragmentStatePagerAdapter {
                 frag = new TabDescriptionFragment();
                 break;
             case 1:
-                frag = new TabDescriptionFragment();
+                frag = new TabMarcFragment();
                 break;
             case 2:
                 frag = new TabDescriptionFragment();

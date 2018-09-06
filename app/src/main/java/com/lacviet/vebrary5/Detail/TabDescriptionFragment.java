@@ -59,10 +59,9 @@ public class TabDescriptionFragment extends Fragment {
             @Override
             public void onGlobalLayout() {
                 int heightLoWrite = loSame.getMeasuredHeight();
-                int marginDimen = (int) getActivity().getResources().getDimension(R.dimen.margin_button_bluelight);
                 ViewGroup.MarginLayoutParams marginLayoutParams =
                         (ViewGroup.MarginLayoutParams) scrollView.getLayoutParams();
-                marginLayoutParams.setMargins(0, 0, 0, heightLoWrite+(marginDimen*2));
+                marginLayoutParams.setMargins(0, 0, 0, heightLoWrite);
                 scrollView.setLayoutParams(marginLayoutParams);
             }
         });
@@ -74,7 +73,7 @@ public class TabDescriptionFragment extends Fragment {
         tvPublisher.setText("Đại học Quốc gia Tp. Hồ Chí Minh , 2014");
         tvEdition.setText("Tái bản có cập nhật, bổ sung");
         tvTheme.setText("Nanotechnology");
-        tvSumary.setText("Khoa học và công nghệ nano là một bộ môn khảo sát, tìm hiểu đặc tính của những vật chất cực nhỏ, để thao tác, chồng chập những vật chất này, xây dựng vật thể to hơn. Người ta gọi phương pháp xây dựng từ vật nhỏ đến vật to và to hơn nữa là phương pháp \"từ dưới lên\". Sự xuất hiện của khoa học và công nghệ nano đang cách mạng hóa lề lối suy nghĩ và phương pháp thiết kế toàn thể các loại vật liệu, từ dược phẩm trị liệu đến các linh kiện điện tử với những đặc tính đã định sẵn ngay từ thang phân tử. Công nghệ nano là ngọn sóng thần kỹ nghệ đương đại mà những ứng dụng của nó đang dần dần xuất hiện, bùng nổ và sẽ tạo ra sức va đập mãnh liệt vào cuộc sống của xã hội loài người. Cốt lõi của nền công nghệ nano xoay quanh các phương thức chế biến những vật liệu nano, khảo sát hóa tính, lý tính, cơ tính, quang tính, điện tính, từ tính và tìm kiếm những ứng dụng cho các loại vật liệu này.");
+        tvSumary.setText("Khoa học và công nghệ nano là một bộ môn khảo sát, tìm hiểu đặc tính của những vật chất cực nhỏ, để thao tác, chồng chập những vật chất này, xây dựng vật thể to hơn.");
         Picasso.with(getContext()).load("http://xspace.talaweb.com/nxbtrithuc/home/Khoa%20hoc%20va%20cong%20nghe%20nano.jpg").into(imvDetail);
     }
 
