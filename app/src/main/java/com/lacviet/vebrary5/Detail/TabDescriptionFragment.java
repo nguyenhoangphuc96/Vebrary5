@@ -27,6 +27,8 @@ public class TabDescriptionFragment extends Fragment {
     //
     LinearLayout loSame;
     ScrollView scrollView;
+    //
+    CircularCompletionView circularCompletionView;
 
     public TabDescriptionFragment() {
         // Required empty public constructor
@@ -37,8 +39,18 @@ public class TabDescriptionFragment extends Fragment {
         addControl(view);
         setMarginRCV(view);
         tempData();
+        addCircularView(view);
         return view;
     }
+
+    private void addCircularView(View view) {
+        circularCompletionView = view.findViewById(R.id.circularView);
+        float persent = ((float)5/12)*100;
+        circularCompletionView.setCompletionPercentage(persent);
+        circularCompletionView.setTextSize(16);
+        circularCompletionView.setStrokeSize(5);
+    }
+
     private void setMarginRCV(View view) {
         loSame = view.findViewById(R.id.loSame);
         scrollView = view.findViewById(R.id.scrollView);

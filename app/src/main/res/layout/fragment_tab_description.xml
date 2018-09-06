@@ -165,9 +165,135 @@
 
         </LinearLayout>
         <LinearLayout
+            android:weightSum="100"
+            android:orientation="horizontal"
             android:layout_weight="26"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_weight="20"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_login_top">
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvLikeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="36"
+                    android:textAppearance="@style/TextCountDetailGray"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yêu thích"
+                    android:textAppearance="@style/TextCountSmallSizeDetailGray"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="20"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_login_top">
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvCirculateCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="125"
+                    android:textAppearance="@style/TextCountDetailGray"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lưu thông"
+                    android:textAppearance="@style/TextCountSmallSizeDetailGray"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_weight="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_login_top">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:id="@+id/tvTotalCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textAppearance="@style/TextCountDetailGray"/>
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tổng số"
+                        android:textAppearance="@style/TextCountSmallSizeDetailGray"/>
+
+                </LinearLayout>
+                <com.lacviet.vebrary5.Detail.CircularCompletionView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/circularView"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_weight="20"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_login_top">
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvBorrowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="05"
+                    android:textAppearance="@style/TextCountDetailGray"
+                    android:textColor="@color/colorRed"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đang mượn"
+                    android:textAppearance="@style/TextCountSmallSizeDetailGray"
+                    android:textColor="@color/colorRed"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="20"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_login_top">
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvAvailable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="07"
+                    android:textAppearance="@style/TextCountDetailGray"
+                    android:textColor="@color/colorBackgroundToolbarBlue"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hiện có"
+                    android:textAppearance="@style/TextCountSmallSizeDetailGray"
+                    android:textColor="@color/colorBackgroundToolbarBlue"/>
+
+            </LinearLayout>
 
         </LinearLayout>
         <RelativeLayout
