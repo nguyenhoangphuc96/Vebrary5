@@ -72,12 +72,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <EditText
+                    android:drawableEnd="@drawable/ic_barcode"
                     android:id="@+id/edtSearchNormal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:textAppearance="@style/TextSearchBox"
-                    android:drawableLeft="@drawable/ic_search_white"
+                    android:drawableStart="@drawable/ic_search_white"
                     android:background="@null"
                     android:hint="Nhập từ khóa"
                     android:padding="3dp"

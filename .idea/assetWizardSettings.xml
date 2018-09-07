@@ -19,8 +19,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\nhphuc\Downloads\icons8-data-transfer-96 (1).png" />
-                                      <entry key="outputName" value="ic_transfer" />
+                                      <entry key="imageAsset" value="C:\Users\nhphuc\Downloads\icons8-barcode-96.png" />
+                                      <entry key="outputName" value="ic_barcode" />
                                       <entry key="theme" value="CUSTOM" />
                                       <entry key="themeColor" value="000000" />
                                     </map>

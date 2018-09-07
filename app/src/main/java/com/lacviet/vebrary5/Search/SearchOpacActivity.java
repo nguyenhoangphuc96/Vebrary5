@@ -138,7 +138,17 @@ public class SearchOpacActivity extends AppCompatActivity {
     }
 
     private void addEvent() {
+        tvAdvanceSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startAdvanceOpac();
+            }
+        });
+    }
 
+    private void startAdvanceOpac() {
+        Intent intent = new Intent(SearchOpacActivity.this,SearchOpacAdvanceActivity.class);
+        startActivity(intent);
     }
 
 
@@ -184,8 +194,6 @@ public class SearchOpacActivity extends AppCompatActivity {
         edtSearch = findViewById(R.id.edtSearchNormal);
         tvNoResult = findViewById(R.id.tvNoResult);
         tvAdvanceSearch = findViewById(R.id.tvAdvanceSearch);
-
-
     }
 
     private void actionBar() {
@@ -201,8 +209,6 @@ public class SearchOpacActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
 
 }
