@@ -5,4 +5,8 @@
         android:icon="@drawable/ic_search_white"
         android:title="Search"
         app:showAsAction="always" />
+    <item android:id="@+id/menu_user"
+        android:icon="@drawable/ic_user"
+        android:title="User"
+        app:showAsAction="always" />
 </menu>

@@ -9,7 +9,6 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         >
 
         <android.support.v7.widget.Toolbar
@@ -53,18 +52,15 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorBackgroundToolbarBlue"
-
         >
         <LinearLayout
             android:weightSum="100"
             android:orientation="horizontal"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border_edittext_search"
             android:focusableInTouchMode="true"
             android:focusable="true"
-
             android:layout_marginHorizontal="10dp"
             >
             <LinearLayout
@@ -82,7 +78,6 @@
                     android:background="@null"
                     android:hint="Nhập từ khóa"
                     android:padding="3dp"
-
                     />
             </LinearLayout>
             <LinearLayout
@@ -112,7 +107,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/rcv_item_padding">
-
             <TextView
                 android:textAllCaps="true"
                 android:layout_width="wrap_content"
@@ -126,7 +120,6 @@
             android:background="@drawable/border_recyclerview_mainscreen_white">
 
             <android.support.v7.widget.RecyclerView
-
                 android:id="@+id/rcvSearchNormal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

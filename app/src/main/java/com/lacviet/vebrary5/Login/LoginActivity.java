@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lacviet.vebrary5.MainActivity;
+import com.lacviet.vebrary5.MainActivityNew;
 import com.lacviet.vebrary5.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -33,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void startMainActivity() {
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(LoginActivity.this, MainActivityNew.class);
         startActivity(intent);
     }
 

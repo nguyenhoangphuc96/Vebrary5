@@ -191,8 +191,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvTitleToolbar = findViewById(R.id.tvTitleToolbar);
         txtTitleCategory = findViewById(R.id.txtTitleCategory);
         pbMainScreen = findViewById(R.id.pbMainScreen);
-
-
     }
     private void setPositionTextViewTittleCategogy() {
         loToolBar = findViewById(R.id.loToolBar);

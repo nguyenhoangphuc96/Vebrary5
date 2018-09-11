@@ -17,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivityNew"></activity>
         <activity android:name=".Search.SearchOpacActivity"></activity>
         <activity android:name=".Detail.DetailActivity"></activity>
         <activity android:name=".Search.SearchOpacAdvanceActivity"></activity>
