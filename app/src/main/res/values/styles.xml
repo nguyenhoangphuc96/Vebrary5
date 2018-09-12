@@ -87,4 +87,14 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/colorGrayforText</item>
     </style>
+    <style name="TextTitleMenu" parent="@style/TextAppearance.Design.Counter">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextTitleMenuChil" parent="@style/TextAppearance.Design.Counter">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
 </resources>

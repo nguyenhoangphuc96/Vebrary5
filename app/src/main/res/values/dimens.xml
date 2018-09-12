@@ -19,4 +19,6 @@
     <dimen name="margin_button_bluelight">10dp</dimen>
     <dimen name="padding_spinner_advanced_search">7dp</dimen>
     <dimen name="padding_textview_advance_search">15dp</dimen>
+    <dimen name="paddingleft_list_menu_chil">15dp</dimen>
+    <dimen name="height_list_menu_chil">40dp</dimen>
 </resources>

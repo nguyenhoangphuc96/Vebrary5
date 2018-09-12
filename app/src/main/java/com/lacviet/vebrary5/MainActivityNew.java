@@ -26,6 +26,12 @@ import android.widget.TextView;
 import com.lacviet.vebrary5.Adapter.MainscreenRecyclerViewAdapter;
 import com.lacviet.vebrary5.Home.Fragment1;
 import com.lacviet.vebrary5.Home.Fragment2;
+import com.lacviet.vebrary5.Login.LoginActivity;
+import com.lacviet.vebrary5.MenuNavigation.BookMenuFragment;
+import com.lacviet.vebrary5.MenuNavigation.EbookMenuFragment;
+import com.lacviet.vebrary5.MenuNavigation.IntroMenuFragment;
+import com.lacviet.vebrary5.MenuNavigation.NewsMenuFragment;
+import com.lacviet.vebrary5.MenuNavigation.SearchMenuFragment;
 import com.lacviet.vebrary5.Model.MainScreenWithImageModel;
 
 import java.util.ArrayList;
@@ -49,8 +55,19 @@ public class MainActivityNew extends AppCompatActivity implements View.OnClickLi
         actionBar();
         showFragment();
         dropDownSpinner();
+        showIntroMenu();
     }
-
+    private void showIntroMenu() {
+        //show fragment
+        IntroMenuFragment introMenuFragment = new IntroMenuFragment();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.layout_show_menu, introMenuFragment, introMenuFragment.getTag())
+                .commit();
+        //set color
+        setDefaultIconMenu();
+        arrImageView[1].setImageDrawable(getResources().getDrawable(R.drawable.ic_intro_circle_yellow));
+    }
     private void dropDownSpinner() {
         spinnerSearch = findViewById(R.id.spinnerSearch);
 
@@ -120,33 +137,60 @@ public class MainActivityNew extends AppCompatActivity implements View.OnClickLi
                 break;
             }
             case R.id.imvIntroMenu: {
-
+                //show fragment
+                IntroMenuFragment introMenuFragment = new IntroMenuFragment();
+                FragmentManager manager = getSupportFragmentManager();
+                manager.beginTransaction()
+                        .replace(R.id.layout_show_menu, introMenuFragment, introMenuFragment.getTag())
+                        .commit();
                 //set color
                 setDefaultIconMenu();
                 arrImageView[1].setImageDrawable(getResources().getDrawable(R.drawable.ic_intro_circle_yellow));
                 break;
             }
             case R.id.imvNewsMenu: {
-
+                //show fragment
+                NewsMenuFragment newsMenuFragment = new NewsMenuFragment();
+                FragmentManager manager = getSupportFragmentManager();
+                manager.beginTransaction()
+                        .replace(R.id.layout_show_menu, newsMenuFragment, newsMenuFragment.getTag())
+                        .commit();
                 //set color
                 setDefaultIconMenu();
                 arrImageView[2].setImageDrawable(getResources().getDrawable(R.drawable.ic_news_circle_yellow));
                 break;
             }
             case R.id.imvSearchMenu: {
-
+                //show fragment
+                SearchMenuFragment searchMenuFragment = new SearchMenuFragment();
+                FragmentManager manager = getSupportFragmentManager();
+                manager.beginTransaction()
+                        .replace(R.id.layout_show_menu, searchMenuFragment, searchMenuFragment.getTag())
+                        .commit();
                 //set color
                 setDefaultIconMenu();
                 arrImageView[3].setImageDrawable(getResources().getDrawable(R.drawable.ic_search_circle_yellow));
                 break;
             }
             case R.id.imvEbookMenu: {
+                //show fragment
+                EbookMenuFragment ebookMenuFragment = new EbookMenuFragment();
+                FragmentManager manager = getSupportFragmentManager();
+                manager.beginTransaction()
+                        .replace(R.id.layout_show_menu, ebookMenuFragment, ebookMenuFragment.getTag())
+                        .commit();
                 //set color
                 setDefaultIconMenu();
                 arrImageView[4].setImageDrawable(getResources().getDrawable(R.drawable.ic_ebook_circle_yellow));
                 break;
             }
             case R.id.imvBookMenu: {
+                //show fragment
+                BookMenuFragment bookMenuFragment = new BookMenuFragment();
+                FragmentManager manager = getSupportFragmentManager();
+                manager.beginTransaction()
+                        .replace(R.id.layout_show_menu, bookMenuFragment, bookMenuFragment.getTag())
+                        .commit();
                 //set color
                 setDefaultIconMenu();
                 arrImageView[5].setImageDrawable(getResources().getDrawable(R.drawable.ic_book_circle_yellow));
@@ -158,7 +202,7 @@ public class MainActivityNew extends AppCompatActivity implements View.OnClickLi
 
             }
             case R.id.imvConfig: {
-
+                startLogin();
                 break;
 
             }
@@ -171,6 +215,12 @@ public class MainActivityNew extends AppCompatActivity implements View.OnClickLi
                 break;
         }
     }
+
+    private void startLogin() {
+        Intent intent = new Intent(MainActivityNew.this, LoginActivity.class);
+        startActivity(intent);
+    }
+
     private void setDefaultIconMenu() {
         int index = 0;
         for (index = 0; index < arrImageView.length; index++) {
