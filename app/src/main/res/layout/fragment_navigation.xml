@@ -25,6 +25,7 @@
             android:id="@+id/imvHomeMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:src="@drawable/ic_home_circle"
             />
     </LinearLayout>
         <LinearLayout
@@ -33,7 +34,18 @@
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/imvIntroMenu"
-
+                android:src="@drawable/ic_intro_circle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imvNewsMenu"
+                android:src="@drawable/ic_new_circle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 />
@@ -44,18 +56,7 @@
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/imvSearchMenu"
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="10"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/imvCateMenu"
-
+                android:src="@drawable/ic_search_circle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                />
@@ -65,8 +66,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/imvLegisMenu"
-
+                android:id="@+id/imvEbookMenu"
+                android:src="@drawable/ic_ebook_circle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 />
@@ -75,7 +76,12 @@
             android:layout_weight="10"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
+            <ImageView
+                android:id="@+id/imvBookMenu"
+                android:src="@drawable/ic_book_circle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
         </LinearLayout>
         <LinearLayout
             android:layout_weight="10"
@@ -89,7 +95,7 @@
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/imvContactMenu"
-
+                android:src="@drawable/ic_contact_circle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 />
@@ -100,7 +106,7 @@
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/imvConfig"
-
+                android:src="@drawable/ic_config_circle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 />
@@ -111,7 +117,7 @@
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/imvExitMenu"
-
+                android:src="@drawable/ic_exit_circle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 />

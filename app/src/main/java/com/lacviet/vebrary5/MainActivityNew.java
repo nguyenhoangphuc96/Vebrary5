@@ -1,5 +1,7 @@
 package com.lacviet.vebrary5;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -15,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -34,6 +37,9 @@ public class MainActivityNew extends AppCompatActivity implements View.OnClickLi
     DrawerLayout drawerLayout;
     ProgressBar pbMainScreen;
     Spinner spinnerSearch;
+    //menu
+    private int arrImageViewId[] = {R.id.imvHomeMenu, R.id.imvIntroMenu, R.id.imvNewsMenu, R.id.imvSearchMenu, R.id.imvEbookMenu, R.id.imvBookMenu, R.id.imvContactMenu, R.id.imvConfig, R.id.imvExitMenu};
+    private ImageView arrImageView[] = new ImageView[arrImageViewId.length];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,9 +111,93 @@ public class MainActivityNew extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.imvHomeMenu: {
+                Intent intent = new Intent(MainActivityNew.this, MainActivityNew.class);
+                startActivity(intent);
 
+                break;
+            }
+            case R.id.imvIntroMenu: {
+
+                //set color
+                setDefaultIconMenu();
+                arrImageView[1].setImageDrawable(getResources().getDrawable(R.drawable.ic_intro_circle_yellow));
+                break;
+            }
+            case R.id.imvNewsMenu: {
+
+                //set color
+                setDefaultIconMenu();
+                arrImageView[2].setImageDrawable(getResources().getDrawable(R.drawable.ic_news_circle_yellow));
+                break;
+            }
+            case R.id.imvSearchMenu: {
+
+                //set color
+                setDefaultIconMenu();
+                arrImageView[3].setImageDrawable(getResources().getDrawable(R.drawable.ic_search_circle_yellow));
+                break;
+            }
+            case R.id.imvEbookMenu: {
+                //set color
+                setDefaultIconMenu();
+                arrImageView[4].setImageDrawable(getResources().getDrawable(R.drawable.ic_ebook_circle_yellow));
+                break;
+            }
+            case R.id.imvBookMenu: {
+                //set color
+                setDefaultIconMenu();
+                arrImageView[5].setImageDrawable(getResources().getDrawable(R.drawable.ic_book_circle_yellow));
+                break;
+            }
+            case R.id.imvContactMenu: {
+
+                break;
+
+            }
+            case R.id.imvConfig: {
+
+                break;
+
+            }
+            case R.id.imvExitMenu: {
+                onBackPressed();
+
+                break;
+            }
+            default:
+                break;
+        }
     }
-
+    private void setDefaultIconMenu() {
+        int index = 0;
+        for (index = 0; index < arrImageView.length; index++) {
+            switch (index) {
+                case 0: {
+                    break;
+                }
+                case 1: {
+                    arrImageView[1].setImageDrawable(getResources().getDrawable(R.drawable.ic_intro_circle));
+                }
+                case 2: {
+                    arrImageView[2].setImageDrawable(getResources().getDrawable(R.drawable.ic_new_circle));
+                }
+                case 3: {
+                    arrImageView[3].setImageDrawable(getResources().getDrawable(R.drawable.ic_search_circle));
+                }
+                case 4: {
+                    arrImageView[4].setImageDrawable(getResources().getDrawable(R.drawable.ic_ebook_circle));
+                }
+                case 5: {
+                    arrImageView[5].setImageDrawable(getResources().getDrawable(R.drawable.ic_book_circle));
+                }
+                default:
+                    break;
+            }
+        }
+    }
     private void addControl() {
         toolbar = findViewById(R.id.toolbarMainscreen);
         navigationView = findViewById(R.id.ngvMainscreen);
@@ -115,6 +205,11 @@ public class MainActivityNew extends AppCompatActivity implements View.OnClickLi
         tvTitleToolbar = findViewById(R.id.tvTitleToolbar);
         pbMainScreen = findViewById(R.id.pbMainScreen);
         spinnerSearch = findViewById(R.id.spinnerSearch);
+        //Menu
+        for (int index = 0; index < arrImageView.length; index++) {
+            arrImageView[index] = findViewById(arrImageViewId[index]);
+            arrImageView[index].setOnClickListener(this);
+        }
     }
 
     private void actionBar() {
@@ -130,7 +225,32 @@ public class MainActivityNew extends AppCompatActivity implements View.OnClickLi
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Đồng ý thoát khỏi ứng dụng?");
+        alertDialogBuilder
+                .setMessage("Chọn có để thoát")
+                .setCancelable(false)
+                .setPositiveButton("Có",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                moveTaskToBack(true);
+                                android.os.Process.killProcess(android.os.Process.myPid());
+                                System.exit(1);
+                            }
+                        })
 
+                .setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        dialog.cancel();
+                    }
+                });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+    }
     public void hideView(View view) {
         view.setVisibility(View.INVISIBLE);
     }
