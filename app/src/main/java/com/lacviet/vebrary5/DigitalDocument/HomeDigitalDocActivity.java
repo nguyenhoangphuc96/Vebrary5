@@ -134,7 +134,7 @@ public class HomeDigitalDocActivity extends AppCompatActivity {
     }
 
     private void startDetailActivity(int id) {
-        Intent intent = new Intent(HomeDigitalDocActivity.this, DetailActivity.class);
+        Intent intent = new Intent(HomeDigitalDocActivity.this, DetailDigitalDocActivity.class);
 
         startActivity(intent);
     }

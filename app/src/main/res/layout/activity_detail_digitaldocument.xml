@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorBackgroundToolbarBlue"
+            app:title="Chi tiết tài liệu"
+
+            >
+
+            <TextView
+                android:id="@+id/tvTitleToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="start"
+                android:textAppearance="@style/TextTitleGlobalWhite" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
+
+                <TextView
+                    android:textAllCaps="true"
+                    android:id="@+id/tvSee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/textview_blue_light_paddingright"
+                    android:background="@drawable/border_button_bluelight"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/button_bluelight_padding_vertical"
+                    android:paddingBottom="@dimen/button_bluelight_padding_vertical"
+                    android:text="Xem"
+                    android:textAppearance="@style/TextTitleButtonBlue" />
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayoutDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:scrollbars="horizontal"
+                app:tabIndicatorColor="@color/colorBlueLight"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/colorBlueLight"
+                app:tabTextAppearance="@style/TextTabName">
+
+                <android.support.design.widget.TabItem
+                    android:id="@+id/tabDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="tab1" />
+
+                <android.support.design.widget.TabItem
+                    android:text="tab2"
+                    android:id="@+id/tabContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TabLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+
+
+</LinearLayout>

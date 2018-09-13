@@ -97,4 +97,8 @@
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/colorWhite</item>
     </style>
+    <style name="TextDetailContent" parent="TextAppearance.Design.Counter">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorBlackGrayContentText</item>
+    </style>
 </resources>
