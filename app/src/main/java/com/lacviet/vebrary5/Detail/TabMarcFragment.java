@@ -16,7 +16,6 @@ import android.widget.TextView;
 import com.lacviet.vebrary5.R;
 import com.squareup.picasso.Picasso;
 
-import static com.lacviet.vebrary5.MainActivity.toolbar;
 
 public class TabMarcFragment extends Fragment {
     TextView tvMarc;

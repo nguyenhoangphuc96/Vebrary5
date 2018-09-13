@@ -1,5 +1,6 @@
 package com.lacviet.vebrary5.Home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DividerItemDecoration;
@@ -14,6 +15,8 @@ import android.widget.ProgressBar;
 import com.lacviet.vebrary5.Adapter.MainscreenRecyclerViewAdapter;
 import com.lacviet.vebrary5.Adapter.NewBookRCVAdapter;
 import com.lacviet.vebrary5.Adapter.ResultRCVAdapter;
+import com.lacviet.vebrary5.Detail.DetailActivity;
+import com.lacviet.vebrary5.MainActivity;
 import com.lacviet.vebrary5.Model.MainScreenWithImageModel;
 import com.lacviet.vebrary5.Model.ResultItemModel;
 import com.lacviet.vebrary5.R;
@@ -71,7 +74,7 @@ public class Fragment1 extends Fragment {
 
             @Override
             public void onPostClick(long id) {
-
+            startDetailActivity(id);
             }
         });
         //StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
@@ -80,8 +83,11 @@ public class Fragment1 extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(mAdapter);
         recyclerView.setHasFixedSize(true);
+    }
+    private void startDetailActivity(long id) {
+        Intent intent = new Intent(getActivity(), DetailActivity.class);
 
-
+        startActivity(intent);
     }
     private void addEvents() {
 

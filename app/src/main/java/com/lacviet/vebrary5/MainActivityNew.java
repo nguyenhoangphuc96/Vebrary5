@@ -33,6 +33,7 @@ import com.lacviet.vebrary5.MenuNavigation.IntroMenuFragment;
 import com.lacviet.vebrary5.MenuNavigation.NewsMenuFragment;
 import com.lacviet.vebrary5.MenuNavigation.SearchMenuFragment;
 import com.lacviet.vebrary5.Model.MainScreenWithImageModel;
+import com.lacviet.vebrary5.Search.SearchOpacActivity;
 
 import java.util.ArrayList;
 
@@ -119,13 +120,16 @@ public class MainActivityNew extends AppCompatActivity implements View.OnClickLi
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_search:
-                //startOpacSearchActivity();
+                startOpacSearchActivity();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
-
+    private void startOpacSearchActivity() {
+        Intent intent = new Intent(MainActivityNew.this, SearchOpacActivity.class);
+        startActivity(intent);
+    }
     @Override
     public void onClick(View v) {
         int id = v.getId();

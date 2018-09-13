@@ -21,6 +21,7 @@
         <activity android:name=".Search.SearchOpacActivity"></activity>
         <activity android:name=".Detail.DetailActivity"></activity>
         <activity android:name=".Search.SearchOpacAdvanceActivity"></activity>
+        <activity android:name=".DigitalDocument.HomeDigitalDocActivity"></activity>
     </application>
 
 </manifest>
