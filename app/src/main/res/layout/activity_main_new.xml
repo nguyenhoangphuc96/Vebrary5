@@ -114,28 +114,33 @@
 
 
                     </LinearLayout>
-                    <LinearLayout
-                        android:weightSum="100"
-                        android:orientation="vertical"
+                    <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <LinearLayout
-                            android:layout_weight="55"
+                            android:weightSum="100"
                             android:orientation="vertical"
-                            android:id="@+id/layout1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
+                            <LinearLayout
 
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_weight="45"
-                            android:orientation="vertical"
-                            android:id="@+id/layout2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                                android:orientation="vertical"
+                                android:id="@+id/layout1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
 
+                            </LinearLayout>
+                            <LinearLayout
+
+                                android:orientation="vertical"
+                                android:id="@+id/layout2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </LinearLayout>
                         </LinearLayout>
-                    </LinearLayout>
+                    </ScrollView>
+
 
                 </LinearLayout>
             </LinearLayout>

@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.lacviet.vebrary5.DigitalDocument.HomeDigitalDocActivity;
+import com.lacviet.vebrary5.MagazineOnline.HomeMagazineOnlineActivity;
 import com.lacviet.vebrary5.R;
 
 public class EbookMenuFragment extends Fragment {
@@ -42,7 +43,7 @@ public class EbookMenuFragment extends Fragment {
         tvOnlineMagazine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startMagazineOnlineHome();
             }
         });
         tvChildren.setOnClickListener(new View.OnClickListener() {
@@ -58,23 +59,11 @@ public class EbookMenuFragment extends Fragment {
         Intent intent = new Intent(getActivity(), HomeDigitalDocActivity.class);
         startActivity(intent);
     }
+    private void startMagazineOnlineHome() {
+        Intent intent = new Intent(getActivity(), HomeMagazineOnlineActivity.class);
+        startActivity(intent);
+    }
 
-    /*private void startContactActivity() {
-        Intent intent = new Intent(getContext(), ContactActivity.class);
-        getContext().startActivity(intent);
-    }
-    private void startIntroActivity() {
-        Intent intent = new Intent(getContext(), IntroActivity.class);
-        getContext().startActivity(intent);
-    }
-    private void startHistoryActivity() {
-        Intent intent = new Intent(getContext(), HistoryActivity.class);
-        getContext().startActivity(intent);
-    }
-    private void startOrganizationActivity() {
-        Intent intent = new Intent(getContext(),OrganizationActivity.class);
-        getContext().startActivity(intent);
-    }*/
 
     private void addControl(View view) {
         tvDigitalDocument = view.findViewById(R.id.tvDigitalDocument);

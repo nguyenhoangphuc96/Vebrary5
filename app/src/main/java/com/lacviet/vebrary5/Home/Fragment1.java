@@ -83,6 +83,7 @@ public class Fragment1 extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(mAdapter);
         recyclerView.setHasFixedSize(true);
+        recyclerView.setNestedScrollingEnabled(false);
     }
     private void startDetailActivity(long id) {
         Intent intent = new Intent(getActivity(), DetailActivity.class);

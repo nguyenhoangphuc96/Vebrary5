@@ -23,6 +23,7 @@
         <activity android:name=".Search.SearchOpacAdvanceActivity"></activity>
         <activity android:name=".DigitalDocument.HomeDigitalDocActivity"></activity>
         <activity android:name=".DigitalDocument.DetailDigitalDocActivity"></activity>
+        <activity android:name=".MagazineOnline.HomeMagazineOnlineActivity"></activity>
     </application>
 
 </manifest>
