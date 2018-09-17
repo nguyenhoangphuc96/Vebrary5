@@ -24,6 +24,8 @@
         <activity android:name=".DigitalDocument.HomeDigitalDocActivity"></activity>
         <activity android:name=".DigitalDocument.DetailDigitalDocActivity"></activity>
         <activity android:name=".MagazineOnline.HomeMagazineOnlineActivity"></activity>
+        <activity android:name=".MagazineOnline.SerialMagazineOnlActivity"></activity>
+        <activity android:name=".News.EducationNewsActivity"></activity>
     </application>
 
 </manifest>

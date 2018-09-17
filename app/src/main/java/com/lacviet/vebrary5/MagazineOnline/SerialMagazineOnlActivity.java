@@ -20,13 +20,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.lacviet.vebrary5.DigitalDocument.DetailDigitalDocActivity;
-import com.lacviet.vebrary5.Model.MagazineOnlineModel;
+import com.lacviet.vebrary5.Model.SerialMagazineModel;
 import com.lacviet.vebrary5.R;
 import com.lacviet.vebrary5.Search.SearchOpacAdvanceActivity;
 
 import java.util.ArrayList;
 
-public class HomeMagazineOnlineActivity extends AppCompatActivity {
+public class SerialMagazineOnlActivity extends AppCompatActivity {
 
 
     private Toolbar toolbar;
@@ -38,8 +38,8 @@ public class HomeMagazineOnlineActivity extends AppCompatActivity {
     Boolean isSearched = false;
     String category = "any";
     //RecyclerView api
-    private MagazineOnlineRCVAdapter mAdapter;
-    ArrayList<MagazineOnlineModel> listMagazine;
+    private SerialMagazineOnlineRCVAdapter mAdapter;
+    ArrayList<SerialMagazineModel> listMagazine;
     //
     LinearLayout loAdvanceSearch;
 
@@ -75,29 +75,29 @@ public class HomeMagazineOnlineActivity extends AppCompatActivity {
     }
     private void initlistMagazine() {
         listMagazine = new ArrayList<>();
-        listMagazine.add(new MagazineOnlineModel("1","Tạp chí Thế Giới Vi Tính - PC World VN / Sở Khoa học và Công nghệ TP.HCM",
-                1,"http://demo.vebrary.vn/SerialOnline/ViewImageBib?BIBID=68521"));
-        listMagazine.add(new MagazineOnlineModel("1","Tạp chí Xưa & Nay",
-                2,"http://demo.vebrary.vn/SerialOnline/ViewImageBib?BIBID=68454"));
-        listMagazine.add(new MagazineOnlineModel("1","Tạp chí thông tin và truyền thông / Bộ Thông tin và truyền thông",
-                3,"http://demo.vebrary.vn/SerialOnline/ViewImageBib?BIBID=68456"));
-        listMagazine.add(new MagazineOnlineModel("1","Xã hội thông tin / Tập đoàn VNPT",
-                9,"http://demo.vebrary.vn/SerialOnline/ViewImageBib?BIBID=68455"));
-        listMagazine.add(new MagazineOnlineModel("1","Tạp chí Văn hoá - Du lịch Đà Nẵng : Sở Văn hoá, Thể thao và Du lịch Đà Nẵng",
-                14,"http://demo.vebrary.vn/SerialOnline/ViewImageBib?BIBID=64793"));
-        listMagazine.add(new MagazineOnlineModel("1","EChip Mobile",
-                2,"http://demo.vebrary.vn/SerialOnline/ViewImageBib?BIBID=60421"));
-        listMagazine.add(new MagazineOnlineModel("1","Làm bạn với máy tính",
-                1,"http://demo.vebrary.vn/SerialOnline/ViewImageBib?BIBID=60433"));
+        listMagazine.add(new SerialMagazineModel("1","Triệt tin nhắn rác: Cần sự kết hợp từ cả hai phía",
+                "số 168 - 2017","http://demo.vebrary.vn/SerialOnline/ViewImage?SERIALID=584"));
+        listMagazine.add(new SerialMagazineModel("1","Công nghệ thực tế ảo: có cơ hội phát triển tại Việt Nam?",
+                "số 169 - 2017","http://demo.vebrary.vn/SerialOnline/ViewImage?SERIALID=586"));
+        listMagazine.add(new SerialMagazineModel("1","Giá thành thực sự của một chiếc smartphone là bao nhiêu?",
+                "số 170 - 2017","http://demo.vebrary.vn/SerialOnline/ViewImage?SERIALID=587"));
+        listMagazine.add(new SerialMagazineModel("1","Việt Nam phải sớm có chiến lược chuyển đổi số quốc gia",
+                "số 171 - 2017","http://demo.vebrary.vn/SerialOnline/ViewImage?SERIALID=588"));
+        listMagazine.add(new SerialMagazineModel("1","MyTV có gì mới sau 8 năm ra mắt người dùng?",
+                "số 172 - 2017","http://demo.vebrary.vn/SerialOnline/ViewImage?SERIALID=589"));
+        listMagazine.add(new SerialMagazineModel("1","Nhà mạng tiếp tục tăng trưởng “nóng” Internet cáp quang",
+                "số 173 - 2017","http://demo.vebrary.vn/SerialOnline/ViewImage?SERIALID=590"));
+        listMagazine.add(new SerialMagazineModel("1","Bộ TT&TT sẽ xử lý nghiêm vấn đề ”nóng” Viễn thông",
+                "số 163 - 2016","http://demo.vebrary.vn/SerialOnline/ViewImage?SERIALID=591"));
         mAdapter.updateAnswers(listMagazine);
         pbSearch.setVisibility(View.GONE);
     }
     private void showDataToRecyclerView() {
-        mAdapter = new MagazineOnlineRCVAdapter(this, new ArrayList<MagazineOnlineModel>(0), new MagazineOnlineRCVAdapter.PostItemListener() {
+        mAdapter = new SerialMagazineOnlineRCVAdapter(this, new ArrayList<SerialMagazineModel>(0), new SerialMagazineOnlineRCVAdapter.PostItemListener() {
 
             @Override
             public void onPostClick(String id) {
-                startSerialMagazine(id);
+
             }
 
         });
@@ -105,28 +105,15 @@ public class HomeMagazineOnlineActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);*/
         //GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
         //recyclerView.setLayoutManager(layoutManager);
-        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(mAdapter);
         recyclerView.setHasFixedSize(true);
-
-        /*EndlessRecyclerViewScrollListener scrollListener = new EndlessRecyclerViewScrollListener(layoutManager) {
-
-            @Override
-            public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
-                if (isFilter) {
-                    showMoreResultByStuffId(page, size, stuffId);
-                } else {
-                    loadMoreAnswers(page, size);
-
-                }
-            }
-        };
-        recyclerView.addOnScrollListener(scrollListener);*/
     }
 
-    private void startSerialMagazine(String id) {
-        Intent intent = new Intent(HomeMagazineOnlineActivity.this, SerialMagazineOnlActivity.class);
+    private void startDetailActivity(int id) {
+        Intent intent = new Intent(SerialMagazineOnlActivity.this, DetailDigitalDocActivity.class);
+
         startActivity(intent);
     }
 
@@ -148,7 +135,7 @@ public class HomeMagazineOnlineActivity extends AppCompatActivity {
     }
 
     private void startAdvanceOpac() {
-        Intent intent = new Intent(HomeMagazineOnlineActivity.this,SearchOpacAdvanceActivity.class);
+        Intent intent = new Intent(SerialMagazineOnlActivity.this,SearchOpacAdvanceActivity.class);
         startActivity(intent);
     }
 

@@ -1,0 +1,85 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?android:attr/selectableItemBackground"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="100"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvHotNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                    cardview:cardBackgroundColor="@color/colorBackgroundToolbarGray"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/imgHotNews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:padding="@dimen/rcv_item_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/tvTitleHot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đồng đội cũ dự đoán Messi sắp chia tay tuyển Argentina"
+                android:textAppearance="@style/TextTitleNews"
+                android:lineSpacingMultiplier="@dimen/line_spacing_text_rcv"/>
+
+            <TextView
+                android:id="@+id/tvSubTittleHot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextSubTitleNews"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Lão tướng của tuyển Argentina cho biết, toàn đội vẫn là một khối thống nhất và quyết tâm hạ Nigeria ở trận cuối cùng."
+                android:lineSpacingMultiplier="@dimen/line_spacing_text_rcv"/>
+            <TextView
+                android:id="@+id/tvTimeHot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1h trước"
+                android:textAppearance="@style/TextTimeNews" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

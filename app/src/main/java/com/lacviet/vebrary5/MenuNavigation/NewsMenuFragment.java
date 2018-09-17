@@ -1,5 +1,6 @@
 package com.lacviet.vebrary5.MenuNavigation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.lacviet.vebrary5.News.EducationNewsActivity;
 import com.lacviet.vebrary5.R;
 
 public class NewsMenuFragment extends Fragment {
@@ -28,7 +30,7 @@ public class NewsMenuFragment extends Fragment {
         tvEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startEducationNews();
             }
         });
         tvMajor.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +46,11 @@ public class NewsMenuFragment extends Fragment {
             }
         });
 
+    }
+
+    private void startEducationNews() {
+        Intent intent = new Intent(getActivity(), EducationNewsActivity.class);
+        startActivity(intent);
     }
 
     /*private void startContactActivity() {
