@@ -1,5 +1,6 @@
 package com.lacviet.vebrary5.News;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -67,7 +68,7 @@ public class EducationNewsActivity extends AppCompatActivity{
 
             @Override
             public void onPostClick(String id, String title, String time, String subTitle) {
-                //startDetailActivity(id);
+                startDetailActivity(id);
             }
 
         });
@@ -80,6 +81,12 @@ public class EducationNewsActivity extends AppCompatActivity{
         recyclerView.addItemDecoration(dividerItemDecoration);
 
     }
+
+    private void startDetailActivity(String id) {
+        Intent intent = new Intent(EducationNewsActivity.this,DetailEducationNewsActivity.class);
+        startActivity(intent);
+    }
+
     private void addControl() {
         toolbar = findViewById(R.id.toolbar);
         tvTitleToolbar = findViewById(R.id.tvTitleToolbar);

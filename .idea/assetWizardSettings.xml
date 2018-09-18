@@ -19,10 +19,10 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\nhphuc\Downloads\icons8-read-96.png" />
-                                      <entry key="outputName" value="ic_book_circle_yellow" />
+                                      <entry key="imageAsset" value="C:\Users\nhphuc\Downloads\icons8-plus-96.png" />
+                                      <entry key="outputName" value="ic_add" />
                                       <entry key="theme" value="CUSTOM" />
-                                      <entry key="themeColor" value="fbff00" />
+                                      <entry key="themeColor" value="ffffff" />
                                     </map>
                                   </option>
                                 </PersistentState>

@@ -26,6 +26,7 @@
         <activity android:name=".MagazineOnline.HomeMagazineOnlineActivity"></activity>
         <activity android:name=".MagazineOnline.SerialMagazineOnlActivity"></activity>
         <activity android:name=".News.EducationNewsActivity"></activity>
+        <activity android:name=".News.DetailEducationNewsActivity"></activity>
     </application>
 
 </manifest>

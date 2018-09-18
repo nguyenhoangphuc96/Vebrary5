@@ -36,13 +36,13 @@ public class NewsMenuFragment extends Fragment {
         tvMajor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startEducationNews();
             }
         });
         tvActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startEducationNews();
             }
         });
 

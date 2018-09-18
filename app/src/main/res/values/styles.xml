@@ -114,4 +114,19 @@
         <item name="android:textColor">@color/colorGrayBlack</item>
         <item name="android:textStyle">bold</item>
     </style>
+    <style name="TextDetailTitle" parent="TextAppearance.Design.Counter">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorGrayBlack</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextDetailSubtitle" parent="TextAppearance.Design.Counter">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorBlackGrayContentText</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="TextDetailCaptionImage" parent="TextAppearance.Design.Counter">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorGrayforText</item>
+        <item name="android:textStyle">italic</item>
+    </style>
 </resources>
