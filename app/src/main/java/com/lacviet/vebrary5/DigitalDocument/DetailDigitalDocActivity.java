@@ -1,5 +1,6 @@
 package com.lacviet.vebrary5.DigitalDocument;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -32,6 +33,17 @@ public class DetailDigitalDocActivity extends AppCompatActivity {
     }
 
     private void addEvent() {
+        tvSee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startReadPDF();
+            }
+        });
+    }
+
+    private void startReadPDF() {
+        Intent intent = new Intent(DetailDigitalDocActivity.this,ReadPDFActivity.class);
+        startActivity(intent);
     }
 
     private void addControl() {
