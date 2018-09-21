@@ -3,6 +3,10 @@
     package="com.lacviet.vebrary5">
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,6 +32,7 @@
         <activity android:name=".News.EducationNewsActivity"></activity>
         <activity android:name=".News.DetailEducationNewsActivity"></activity>
         <activity android:name=".DigitalDocument.ReadPDFActivity"></activity>
+        <activity android:name=".Search.QRBarCodeScannerActivity"></activity>
     </application>
 
 </manifest>

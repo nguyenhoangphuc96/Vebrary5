@@ -11,6 +11,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -144,6 +145,29 @@ public class SearchOpacActivity extends AppCompatActivity {
                 startAdvanceOpac();
             }
         });
+        edtSearch.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                final int DRAWABLE_LEFT = 0;
+                final int DRAWABLE_TOP = 1;
+                final int DRAWABLE_RIGHT = 2;
+                final int DRAWABLE_BOTTOM = 3;
+
+                if(event.getAction() == MotionEvent.ACTION_UP) {
+                    if(event.getRawX() >= (edtSearch.getRight() - edtSearch.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                        startQRBarcodeScanner();
+
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+    }
+
+    private void startQRBarcodeScanner() {
+        Intent intent = new Intent(SearchOpacActivity.this,QRBarCodeScannerActivity.class);
+        startActivity(intent);
     }
 
     private void startAdvanceOpac() {
